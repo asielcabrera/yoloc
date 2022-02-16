@@ -59,7 +59,7 @@ bicycle: 99%
 
 Running YOLO on test data isn't very interesting if you can't see the result. Instead of running it on a bunch of images let's run it on the input from a webcam!
 
-To run this demo you will need to compile yoloc with CUDA and OpenCV. Then run the command:
+To run this demo you will need to compile yoloc with `CUDA and OpenCV`. Then run the command:
 
 ```
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights
@@ -67,10 +67,12 @@ To run this demo you will need to compile yoloc with CUDA and OpenCV. Then run t
 
 YOLO will display the current FPS and predicted classes as well as the image with bounding boxes drawn on top of it.
 
-You will need a webcam connected to the computer that OpenCV can connect to or it won't work. If you have multiple webcams connected and want to select which one to use you can pass the flag -c <num> to pick (OpenCV uses webcam 0 by default).
+You will need a webcam connected to the computer that OpenCV can connect to or it won't work. If you have multiple webcams connected and want to select which one to use you can pass the flag `-c <num>` to pick (OpenCV uses webcam 0 by default).
 
 You can also run it on a video file if OpenCV can read the video:
 
 ```
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file>
 ```
+
+# Train models
