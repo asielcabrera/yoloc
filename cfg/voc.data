@@ -1,0 +1,6 @@
+classes= 20
+train  = /home/shiroe/data/voc/train.txt
+valid  = /home/shiroe/data/voc/2007_test.txt
+names = data/voc.names
+backup = backup
+
