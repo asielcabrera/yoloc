@@ -29,12 +29,32 @@ OPENCV=1
 You already have the config file for YOLO in the cfg/ subdirectory. You will have to download the pre-trained weight file here (237 MB). Or just run this:
 
 ```
-wget https://pjreddie.com/media/files/yolov3.weights
+https://mega.nz/file/1i4hCSwL#iwjxQB0i0nYHUGQqjxotH89tPzp787gTF0Js_ihjVUQ
 ```
+
+Or you can download the network minified version from here:
+
+```
+https://mega.nz/file/1i4hCSwL#iwjxQB0i0nYHUGQqjxotH89tPzp787gTF0Js_ihjVUQ
+```
+
+The respective cfg files: 
+
+```
+cfg/yolov3.cfg # full net
+cfg/yolov3-tiny.cfg # tiny net
+```
+The respective weights files: 
+
+```
+yolov3.weights # full net
+yolov3-tiny.weights # tiny net
+```
+
 Then run the detector!
 
 ```
-./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+./darknet detect cfg/yolov3-tiny.cfg yolov3-tiny.weights data/dog.jpg
 ```
 
 You will see some output like this:
@@ -62,7 +82,7 @@ Running YOLO on test data isn't very interesting if you can't see the result. In
 To run this demo you will need to compile yoloc with `CUDA and OpenCV`. Then run the command:
 
 ```
-./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights
+./darknet detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights
 ```
 
 YOLO will display the current FPS and predicted classes as well as the image with bounding boxes drawn on top of it.
@@ -72,7 +92,7 @@ You will need a webcam connected to the computer that OpenCV can connect to or i
 You can also run it on a video file if OpenCV can read the video:
 
 ```
-./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file>
+./darknet detector demo cfg/coco.data cfg/yolov3-tiny.cfg yolov3-tiny.weights <video file>
 ```
 
 # Train models
