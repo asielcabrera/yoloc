@@ -9,3 +9,4 @@ libdarknet.so
 
 *.weights
 
+.DS_Store
